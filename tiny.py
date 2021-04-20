@@ -43,8 +43,9 @@ if __name__ == '__main__':
     # print(allPngArray)
     for png in allPngArray:
         if os.path.exists(png):
+            print(png)
             dir, file = os.path.split(png)
-            pathPart = dir.split(input+"\\")
+            pathPart = dir.split(input + os.sep)
             outdir = os.path.join(outPath, pathPart[1])
             if not os.path.exists(outdir):
                 os.makedirs(outdir)
